@@ -3,7 +3,7 @@
 
 - 💬 Ask me about *Software Development*
 - ⚡ Fun fact - *I'm multilingual! - Tagalog • English • 
-- 📫 How to reach me - *<jrey0313@gmail.com>*
+- 📫 How to reach me - *<inuxiuz@proton.me>*
 
 
 ## 🌐 Socials
