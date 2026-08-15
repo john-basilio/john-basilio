@@ -14,6 +14,11 @@
 ## 💻 Stack
 [![My Stack](https://skillicons.dev/icons?i=js,html,css,bash,bun,docker,figma,git,github,gitlab,godot,linux,md,mysql,svelte,tailwind,tauri,ts,vscode)](https://skillicons.dev)
 
+## Upstream contributions
+
+<!-- UPSTREAM-CONTRIBUTIONS:START -->
+<!-- UPSTREAM-CONTRIBUTIONS:END -->
+
 [![John Rey Basilio's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=john-basilio&theme=react-dark)](https://github.com/ashutosh00710/github-readme-activity-graph)
 ---
 [![](https://visitcount.itsvg.in/api?id=john-basilio&icon=5&color=0)](https://visitcount.itsvg.in)
