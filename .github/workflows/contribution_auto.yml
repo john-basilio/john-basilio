@@ -1,0 +1,232 @@
+name: Update upstream contributions
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update README
+        env:
+          GH_TOKEN: ${{ github.token }}
+          USERNAME: john-basilio
+        run: |
+          python3 <<'PY'
+          import json
+          import os
+          import subprocess
+          import sys
+
+          username = os.environ["USERNAME"]
+
+          def run_gh(*args):
+              result = subprocess.run(
+                  ["gh", *args],
+                  capture_output=True,
+                  text=True,
+              )
+
+              if result.returncode != 0:
+                  print("GitHub CLI command failed:")
+                  print("gh", *args)
+                  print()
+                  print("stderr:")
+                  print(result.stderr)
+                  sys.exit(result.returncode)
+
+              return json.loads(result.stdout)
+
+          def escape(value):
+              return str(value).replace("|", "\\|").replace("\n", " ")
+
+          # ------------------------------------------------------------
+          # 5 most recent merged PRs authored by the account
+          # ------------------------------------------------------------
+
+          search_results = run_gh(
+              "search", "prs",
+              "--author", username,
+              "--merged",
+              "--limit", "100",
+              "--json", "repository,number",
+          )
+
+          prs = []
+
+          for result in search_results:
+              repo = result["repository"]["nameWithOwner"]
+              number = result["number"]
+
+              pr = run_gh(
+                  "api",
+                  f"repos/{repo}/pulls/{number}",
+              )
+
+              if not pr.get("merged_at"):
+                  continue
+
+              if pr.get("user", {}).get("login", "").lower() != username.lower():
+                  continue
+
+              prs.append(
+                  {
+                      "repository": repo,
+                      "number": number,
+                      "title": pr["title"],
+                      "url": pr["html_url"],
+                      "merged_at": pr["merged_at"],
+                  }
+              )
+
+          prs.sort(
+              key=lambda pr: pr["merged_at"],
+              reverse=True,
+          )
+
+          prs = prs[:5]
+
+          if prs:
+              pr_lines = [
+                  "| Repository | PR | Merged |",
+                  "|---|---|---|",
+              ]
+
+              for pr in prs:
+                  pr_lines.append(
+                      f"| `{escape(pr['repository'])}` | "
+                      f"[#{pr['number']} — {escape(pr['title'])}]({pr['url']}) | "
+                      f"{pr['merged_at'][:10]} |"
+                  )
+
+              pr_content = "\n".join(pr_lines)
+          else:
+              pr_content = "_No merged upstream contributions found._"
+
+          # ------------------------------------------------------------
+          # 5 most recent commits authored by the account
+          #
+          # Use the GitHub Search Commits REST API instead of
+          # `gh search commits`, which is more reliable in Actions.
+          # ------------------------------------------------------------
+
+          commit_results = run_gh(
+              "api",
+              "search/commits",
+              "-X", "GET",
+              "-f", f"q=author:{username}",
+              "-f", "sort=author-date",
+              "-f", "order=desc",
+              "-f", "per_page=5",
+          )
+
+          commits = []
+
+          for commit in commit_results.get("items", []):
+              repository = commit["repository"]["full_name"]
+
+              commit_data = commit.get("commit", {})
+              author_data = commit_data.get("author", {})
+
+              committed_at = author_data.get("date", "")
+
+              commits.append(
+                  {
+                      "repository": repository,
+                      "sha": commit["sha"],
+                      "message": commit_data.get(
+                          "message",
+                          commit.get("commit", {}).get("message", "")
+                      ).splitlines()[0],
+                      "url": commit["html_url"],
+                      "committed_at": committed_at,
+                  }
+              )
+
+          if commits:
+              commit_lines = [
+                  "| Repository | Commit | Date |",
+                  "|---|---|---|",
+              ]
+
+              for commit in commits:
+                  short_sha = commit["sha"][:7]
+
+                  commit_lines.append(
+                      f"| `{escape(commit['repository'])}` | "
+                      f"[`{short_sha}` — {escape(commit['message'])}]({commit['url']}) | "
+                      f"{commit['committed_at'][:10]} |"
+                  )
+
+              commit_content = "\n".join(commit_lines)
+          else:
+              commit_content = "_No commits found._"
+
+          # ------------------------------------------------------------
+          # Update README
+          # ------------------------------------------------------------
+
+          content = (
+              "### Recent Merged Pull Requests\n\n"
+              + pr_content
+              + "\n\n"
+              + "### Recent Commits\n\n"
+              + commit_content
+          )
+
+          start = "<!-- UPSTREAM-CONTRIBUTIONS:START -->"
+          end = "<!-- UPSTREAM-CONTRIBUTIONS:END -->"
+
+          with open("README.md", encoding="utf-8") as f:
+              readme = f.read()
+
+          if start in readme and end in readme:
+              before, remainder = readme.split(start, 1)
+              _, after = remainder.split(end, 1)
+
+              readme = (
+                  before
+                  + start
+                  + "\n"
+                  + content
+                  + "\n"
+                  + end
+                  + after
+              )
+          else:
+              readme += (
+                  "\n## Upstream Contributions\n\n"
+                  + start
+                  + "\n"
+                  + content
+                  + "\n"
+                  + end
+                  + "\n"
+              )
+
+          with open("README.md", "w", encoding="utf-8") as f:
+              f.write(readme)
+          PY
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add README.md
+
+          if git diff --cached --quiet; then
+            echo "README is already up to date."
+            exit 0
+          fi
+
+          git commit -m "docs: update upstream contributions"
+          git push
