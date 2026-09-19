@@ -31,11 +31,11 @@
 
 | Repository | Commit | Date |
 |---|---|---|
+| `john-basilio/slint-setup` | [`27cabc3` — Enhance README with table of contents and updates](https://github.com/john-basilio/slint-setup/commit/27cabc3145a857b0524fd4ff4e567ebdfff6e379) | 2026-09-18 |
+| `john-basilio/slint-setup` | [`ae5d7b8` — Update Slint version to 1.18.0 in README](https://github.com/john-basilio/slint-setup/commit/ae5d7b8187d48944e4dab5214e2314aa7a6a7f45) | 2026-09-18 |
 | `john-basilio/pace-rs` | [`b2afda5` — rename and add README](https://github.com/john-basilio/pace-rs/commit/b2afda5d5d3a206b7ddf7f4d423935cfa6ae449b) | 2026-08-29 |
 | `john-basilio/pace-rs` | [`436570d` — gdscript override fix](https://github.com/john-basilio/pace-rs/commit/436570d32fcd57d09668827308aeef2128ac065a) | 2026-08-28 |
 | `john-basilio/pace-rs` | [`e235ca9` — initial commit](https://github.com/john-basilio/pace-rs/commit/e235ca90b42ac072e89c8b4ba35279ad6ca5678e) | 2026-08-28 |
-| `john-basilio/john-basilio` | [`a94595a` — Change cron schedule to run daily at midnight](https://github.com/john-basilio/john-basilio/commit/a94595a138cb0ff26ebc4bbcb074169fd5e4d84b) | 2026-08-19 |
-| `john-basilio/john-basilio` | [`538194e` — Add workflow to update README with contributions](https://github.com/john-basilio/john-basilio/commit/538194e66a90674c4f376226fda92bc5f136f617) | 2026-08-15 |
 <!-- UPSTREAM-CONTRIBUTIONS:END -->
 
 [![John Rey Basilio's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=john-basilio&theme=react-dark)](https://github.com/ashutosh00710/github-readme-activity-graph)
