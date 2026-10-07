@@ -31,11 +31,11 @@
 
 | Repository | Commit | Date |
 |---|---|---|
+| `john-basilio/mini_ledger` | [`018f9e9` — Update README.md](https://github.com/john-basilio/mini_ledger/commit/018f9e955727a548799866e48f7d593c48a2cb82) | 2026-10-06 |
+| `john-basilio/mini_ledger` | [`cc282a2` — update readme](https://github.com/john-basilio/mini_ledger/commit/cc282a2330e7bf157264ed1d4a95148e30a1b3c5) | 2026-10-06 |
+| `john-basilio/mini_ledger` | [`bccec58` — better error-handling-to-ui added](https://github.com/john-basilio/mini_ledger/commit/bccec58d66873857a0143ad521df5c6bb5060b78) | 2026-10-06 |
+| `john-basilio/mini_ledger` | [`226543b` — core functionality update(incomlpete)](https://github.com/john-basilio/mini_ledger/commit/226543beb95879be30b51c461747a79e8be37aa9) | 2026-10-03 |
 | `john-basilio/slint-setup` | [`27cabc3` — Enhance README with table of contents and updates](https://github.com/john-basilio/slint-setup/commit/27cabc3145a857b0524fd4ff4e567ebdfff6e379) | 2026-09-18 |
-| `john-basilio/slint-setup` | [`ae5d7b8` — Update Slint version to 1.18.0 in README](https://github.com/john-basilio/slint-setup/commit/ae5d7b8187d48944e4dab5214e2314aa7a6a7f45) | 2026-09-18 |
-| `john-basilio/john-basilio` | [`a94595a` — Change cron schedule to run daily at midnight](https://github.com/john-basilio/john-basilio/commit/a94595a138cb0ff26ebc4bbcb074169fd5e4d84b) | 2026-08-19 |
-| `john-basilio/john-basilio` | [`538194e` — Add workflow to update README with contributions](https://github.com/john-basilio/john-basilio/commit/538194e66a90674c4f376226fda92bc5f136f617) | 2026-08-15 |
-| `john-basilio/john-basilio` | [`7615215` — added contributions section](https://github.com/john-basilio/john-basilio/commit/7615215eb622495223cf4662c4b9cffa9f5341b8) | 2026-08-15 |
 <!-- UPSTREAM-CONTRIBUTIONS:END -->
 
 [![John Rey Basilio's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=john-basilio&theme=react-dark)](https://github.com/ashutosh00710/github-readme-activity-graph)
