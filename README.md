@@ -38,8 +38,4 @@
 | `john-basilio/slint-setup` | [`27cabc3` — Enhance README with table of contents and updates](https://github.com/john-basilio/slint-setup/commit/27cabc3145a857b0524fd4ff4e567ebdfff6e379) | 2026-09-18 |
 <!-- UPSTREAM-CONTRIBUTIONS:END -->
 
-[![John Rey Basilio's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=john-basilio&theme=react-dark)](https://github.com/ashutosh00710/github-readme-activity-graph)
----
-[![](https://visitcount.itsvg.in/api?id=john-basilio&icon=5&color=0)](https://visitcount.itsvg.in)
-
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
