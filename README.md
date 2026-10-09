@@ -31,11 +31,11 @@
 
 | Repository | Commit | Date |
 |---|---|---|
+| `john-basilio/john-basilio` | [`cb239ab` — Remove activity graph and visit count from README](https://github.com/john-basilio/john-basilio/commit/cb239abe23fae36c0db925d84a899ee27d6fdd38) | 2026-10-08 |
 | `john-basilio/mini_ledger` | [`018f9e9` — Update README.md](https://github.com/john-basilio/mini_ledger/commit/018f9e955727a548799866e48f7d593c48a2cb82) | 2026-10-06 |
 | `john-basilio/mini_ledger` | [`cc282a2` — update readme](https://github.com/john-basilio/mini_ledger/commit/cc282a2330e7bf157264ed1d4a95148e30a1b3c5) | 2026-10-06 |
 | `john-basilio/mini_ledger` | [`bccec58` — better error-handling-to-ui added](https://github.com/john-basilio/mini_ledger/commit/bccec58d66873857a0143ad521df5c6bb5060b78) | 2026-10-06 |
 | `john-basilio/mini_ledger` | [`226543b` — core functionality update(incomlpete)](https://github.com/john-basilio/mini_ledger/commit/226543beb95879be30b51c461747a79e8be37aa9) | 2026-10-03 |
-| `john-basilio/slint-setup` | [`27cabc3` — Enhance README with table of contents and updates](https://github.com/john-basilio/slint-setup/commit/27cabc3145a857b0524fd4ff4e567ebdfff6e379) | 2026-09-18 |
 <!-- UPSTREAM-CONTRIBUTIONS:END -->
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
