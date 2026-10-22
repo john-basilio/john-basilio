@@ -31,11 +31,11 @@
 
 | Repository | Commit | Date |
 |---|---|---|
+| `john-basilio/fnar` | [`56669fc` — add player](https://github.com/john-basilio/fnar/commit/56669fc6c564aeab11f4e67e4c2c70ba79154063) | 2026-10-21 |
 | `john-basilio/fnar` | [`754bb82` — loading screen and menu spries](https://github.com/john-basilio/fnar/commit/754bb82e78af9fe18c174b93b5fda2efc1cd6f88) | 2026-10-14 |
 | `john-basilio/fnar` | [`b4a13fd` — splash and main menu](https://github.com/john-basilio/fnar/commit/b4a13fd5a91c7015ace70d709c18a6f593eb8baa) | 2026-10-14 |
 | `john-basilio/fnar` | [`499389f` — initial commit](https://github.com/john-basilio/fnar/commit/499389fa4b5a9c1911a2cc1a510402c15f5c989a) | 2026-10-12 |
 | `john-basilio/john-basilio` | [`cb239ab` — Remove activity graph and visit count from README](https://github.com/john-basilio/john-basilio/commit/cb239abe23fae36c0db925d84a899ee27d6fdd38) | 2026-10-08 |
-| `john-basilio/mini_ledger` | [`018f9e9` — Update README.md](https://github.com/john-basilio/mini_ledger/commit/018f9e955727a548799866e48f7d593c48a2cb82) | 2026-10-06 |
 <!-- UPSTREAM-CONTRIBUTIONS:END -->
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
