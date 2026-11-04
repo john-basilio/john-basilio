@@ -31,11 +31,11 @@
 
 | Repository | Commit | Date |
 |---|---|---|
+| `john-basilio/depr_proposal` | [`2400a0b` — Revise README to include DEPR architecture and CLI details](https://github.com/john-basilio/depr_proposal/commit/2400a0bd7c39bf737efd01d01ac88192ae9eaf29) | 2026-11-03 |
+| `john-basilio/depr_proposal` | [`37e31ea` — Initial commit](https://github.com/john-basilio/depr_proposal/commit/37e31eaf75115f6e202e3095ff0ef8a18680d4d9) | 2026-11-03 |
 | `john-basilio/fnar` | [`56669fc` — add player](https://github.com/john-basilio/fnar/commit/56669fc6c564aeab11f4e67e4c2c70ba79154063) | 2026-10-21 |
 | `john-basilio/fnar` | [`754bb82` — loading screen and menu spries](https://github.com/john-basilio/fnar/commit/754bb82e78af9fe18c174b93b5fda2efc1cd6f88) | 2026-10-14 |
 | `john-basilio/fnar` | [`b4a13fd` — splash and main menu](https://github.com/john-basilio/fnar/commit/b4a13fd5a91c7015ace70d709c18a6f593eb8baa) | 2026-10-14 |
-| `john-basilio/fnar` | [`499389f` — initial commit](https://github.com/john-basilio/fnar/commit/499389fa4b5a9c1911a2cc1a510402c15f5c989a) | 2026-10-12 |
-| `john-basilio/john-basilio` | [`cb239ab` — Remove activity graph and visit count from README](https://github.com/john-basilio/john-basilio/commit/cb239abe23fae36c0db925d84a899ee27d6fdd38) | 2026-10-08 |
 <!-- UPSTREAM-CONTRIBUTIONS:END -->
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
